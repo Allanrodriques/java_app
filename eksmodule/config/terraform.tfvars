@@ -1,8 +1,3 @@
-region     = "us-east-2"
-access_key = "AKIAW4VHLHP5FKEE6WHG"
-secret_key = "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"
-
-
 aws_eks_cluster_config = {
 
   "demo-cluster" = {
