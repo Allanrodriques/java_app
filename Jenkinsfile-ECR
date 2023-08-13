@@ -108,20 +108,18 @@ pipeline{
                }
             }
         } 
-        stage('Create EKS Cluster: Terraform'){
-         when { expression {  params.action == 'create' } }
-            steps{
-               script{
-                   dir('eksmodule'){
-                    sh """
-                    terraform init
-                    terraform plan --var-file="./config/terraform.tfvars"
-                    """
-                   }
+        // stage('Create EKS Cluster: Terraform'){
+        //  when { expression {  params.action == 'create' } }
+        //     steps{
+        //        script{
+        //            dir('eksmodule'){
+        //             sh """
+        //             terraform init
+        //             terraform plan --var-file="./config/terraform.tfvars"
+        //             """
+        //            }
 
-            }
-        } 
-
+        //     }
+        // } 
     } 
-}  
-
+}
