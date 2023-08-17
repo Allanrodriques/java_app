@@ -123,7 +123,7 @@ pipeline{
                     //     terraform plan -var 'access_key=$ACCESS_KEY' -var 'secret_key=$SECRET_KEY' -var 'region=${params.region}' --var-file=./config/terraform.tfvars
                     //     terraform apply -var 'access_key=$ACCESS_KEY' -var 'secret_key=$SECRET_KEY' -var 'region=${params.region}' --var-file=./config/terraform.tfvars --auto-approve
                     //     """
-                    sh "terraform destroy"
+                    sh "terraform destroy -var 'access_key=$ACCESS_KEY' -var 'secret_key=$SECRET_KEY' -var 'region=${params.region}' --var-file=./config/terraform.tfvars --auto-approve"
                    }
                 }
             }
